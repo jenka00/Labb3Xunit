@@ -36,5 +36,20 @@ namespace Labb3XunitTests
             //Assert
             Assert.Equal(expected, actual);
         }
+        [Theory]
+        [InlineData(true)]
+        public void Print_All_Calculations_Return_True_If_List_Is_Not_Empty(bool expected)
+        {
+            //Arrange
+            Menu m1 = new Menu();
+            m1.Calculations = new List<string>();
+            m1.Calculations.Add("100 - 80 = 20");
+
+            //Act
+            bool actual = m1.PrintAllCalculations();
+
+            //Assert
+            Assert.Equal(expected, actual);
+        }
     }
 }
