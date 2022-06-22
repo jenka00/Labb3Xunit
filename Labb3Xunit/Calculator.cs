@@ -21,7 +21,11 @@ namespace Labb3Xunit
         }
         public double Divide(double t1, double t2)
         {
-            return t1 / t2; ;
+            if (t1 == 0 || t2 == 0)
+            {
+                return 0;
+            }
+            return t1 / t2; 
         }
     }
 }

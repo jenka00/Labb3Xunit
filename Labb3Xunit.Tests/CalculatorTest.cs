@@ -128,5 +128,18 @@ namespace Labb3XunitTests
             //Assert
             Assert.Equal(actual, expected);
         }
+        [Fact]
+        public void Divide_Should_Return_Zero_If_Dividing_By_Zero()
+        {
+            //Arrange
+            Calculator cal = new Calculator();
+            double expected = 0;
+
+            //Act
+            double actual = cal.Divide(10, 0);
+
+            //Assert
+            Assert.Equal(expected, actual);
+        }
     }
 }
